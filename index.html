@@ -1,151 +1,295 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oval Foods | هايبر ماركت وفروع</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <title>Ahmed Mohamed</title>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #1f242b, #2b2f38);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0078ff, #00b7ff);
+      text-align: center;
+      padding: 15px 0;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    header img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 850px;
+      margin: 30px auto;
+    }
+
+    /* search bar */
+    .search-container {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .search-container input {
+      width: 90%;
+      max-width: 600px;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      background: #2f3541;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .search-container input:focus {
+      background: #3b4250;
+      box-shadow: 0 0 8px #00b7ff;
+    }
+
+    /* accordion style */
+    .accordion {
+      background-color: #2f343e;
+      color: #fff;
+      cursor: pointer;
+      padding: 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: right;
+      font-size: 20px;
+      transition: 0.3s;
+      border-radius: 10px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion:hover {
+      background-color: #3a3f4c;
+    }
+
+    .accordion:after {
+      content: '+';
+      font-size: 22px;
+      transition: transform 0.3s;
+    }
+
+    .active:after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+
+    .panel {
+      padding: 10px 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #1f232a;
+      border-radius: 0 0 10px 10px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .branch-btn {
+      background: linear-gradient(135deg, #0091ff, #00d4ff);
+      border: none;
+      color: #fff;
+      padding: 10px 15px;
+      margin: 8px 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .branch-btn:hover {
+      background: linear-gradient(135deg, #00b7ff, #0091ff);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <img src="assets/logo.jpeg" alt="Oval Foods Logo" class="logo" onerror="this.style.display='none'">
-      <div class="titles">
-        <h1>Oval Foods Limited</h1>
-        <p class="subtitle">دليل الهايبر ماركت والفروع</p>
-      </div>
-    </div>
-    <div class="search-area">
-      <input id="searchInput" type="text" placeholder="ابحث باسم الهايبر أو الفرع أو المكان..." aria-label="بحث">
-      <button id="clearSearch" aria-label="مسح">مسح</button>
-    </div>
+
+  <header>
+    <img src="assets/احمد.png" alt="logo">
+    Ahmed Mohamed
   </header>
 
-  <main class="container">
-    <div id="stats" class="stats"></div>
-    <div id="accordion" class="accordion" aria-live="polite"></div>
-  </main>
+  <div class="container">
 
-  <footer class="site-footer">
-    <small>© 2025 Oval Foods Limited — تصميم بلون أزرق وواجهة عربية.</small>
-  </footer>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="🔍 ابحث عن شركة أو فرع...">
+    </div>
+
+
+    <!-- Carrefour -->
+    <button class="accordion">كارفور</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">كارفور المعادي</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور مدينة نصر</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور الماظة</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور سيتي لايت</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور سيتي سنتر</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور داندي مول</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور العاشر</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور السلام</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور الشروق</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور العبور</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور 15 مايو</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور سراية القبة</button>
+      <button class="branch-btn" onclick="window.open('')">كارفور أكتوبر</button>
+    </div>
+
+    <!-- Spinneys -->
+    <button class="accordion">سبينس</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">سبينس  بيرلي</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس ايناو</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس بيرلي</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس النزهة</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس شارع سوريا</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس جزيرة العرب</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس سيتي س</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس استرادا مول</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس مسيم مول</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس مول العرب</button>
+      <button class="branch-btn" onclick="window.open('')">سبينس مزارا مول</button>
+    </div>
+
+    <!-- Oscar -->
+    <button class="accordion">أوسكار </button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">أوسكار المعادي</button>
+      <button class="branch-btn" onclick="window.open('')">أوسكار مدينتي</button>
+      <button class="branch-btn" onclick="window.open('')">أوسكار الشيخ زايد</button>
+      <button class="branch-btn" onclick="window.open('')">أوسكار التجمع </button>
+    </div>
+
+    <!-- Mahmoud El Far -->
+    <button class="accordion">محمود الفار</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">الفار زايد</button>
+      <button class="branch-btn" onclick="window.open('')">الفار ستريب زون</button>
+      <button class="branch-btn" onclick="window.open('')">الفار مدينتي</button>
+      <button class="branch-btn" onclick="window.open('')">الفار المهندسين</button>
+      <button class="branch-btn" onclick="window.open('')">الفار اربيلا</button>
+      <button class="branch-btn" onclick="window.open('')">الفار ميفيدا</button>
+      <button class="branch-btn" onclick="window.open('')">الفار شيراتون</button>
+    </div>
+
+    <!-- Panda -->
+    <button class="accordion">بندة سوبر</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">بندة الرحاب</button>
+      <button class="branch-btn" onclick="window.open('')">بندة أكتوبر</button>
+      <button class="branch-btn" onclick="window.open('')">بندة  المعادي</button>
+      <button class="branch-btn" onclick="window.open('')">بندة  الرحاب</button>
+    </div>
+
+    <!-- Awlad Ragab -->
+    <button class="accordion">أولاد رجب</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">أولاد رجب حدايق حلوان </button>
+      <button class="branch-btn" onclick="window.open('')">أولاد رجب التجنيد</button>
+      <button class="branch-btn" onclick="window.open('')">أولاد رجب  العالمين </button>
+    </div>
+
+    <!-- Geant -->
+    <button class="accordion">جيان ماركت</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">جيان التجمع</button>
+      <button class="branch-btn" onclick="window.open('')">جيان الرحاب </button>
+      
+        </div>
+
+    <!-- Zahran -->
+    <button class="accordion">زهران ماركت</button>
+    <div class="panel">
+      <button class="branch-btn" onclick="window.open('')">زهران الإسكندرية</button>
+      <button class="branch-btn" onclick="window.open('')">زهران سموحة</button>
+      <button class="branch-btn" onclick="window.open('')">زهران المعادي</button>
+      <button class="branch-btn" onclick="window.open('')">زهران مدينتي</button>
+      <button class="branch-btn" onclick="window.open('')">زهران زايد</button>
+      <button class="branch-btn" onclick="window.open('')">زهران النجمع الاول</button>
+      <button class="branch-btn" onclick="window.open('')">زهران النجمع الخامس</button>
+    </div>
+
+  </div>
 
   <script>
-    const DATA = [{"name": "بندة سوبر", "branches": [{"name": "فرع 01 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - التجمع الخامس", "area": "التجمع الخامس", "address": "التجمع الخامس، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=التجمع+الخامس،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - العصافرة", "area": "العصافرة", "address": "العصافرة، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=العصافرة،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - المعادي", "area": "المعادي", "address": "المعادي، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=المعادي،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - 6 أكتوبر", "area": "6 أكتوبر", "address": "6 أكتوبر، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=6+أكتوبر،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - مصر الجديدة", "area": "مصر الجديدة", "address": "مصر الجديدة، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=مصر+الجديدة،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - حدائق الأهرام", "area": "حدائق الأهرام", "address": "حدائق الأهرام، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=حدائق+الأهرام،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - المنيل", "area": "المنيل", "address": "المنيل، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=المنيل،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - روض الفرج", "area": "روض الفرج", "address": "روض الفرج، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=روض+الفرج،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - حلوان", "area": "حلوان", "address": "حلوان، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=حلوان،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - سوهاج", "area": "سوهاج", "address": "سوهاج، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=سوهاج،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - العبور", "area": "العبور", "address": "العبور، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=العبور،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - المحلة", "area": "المحلة", "address": "المحلة، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=المحلة،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - دمياط", "area": "دمياط", "address": "دمياط، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=دمياط،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "كارفور", "branches": [{"name": "فرع 01 - أسوان", "area": "أسوان", "address": "أسوان، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=أسوان،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - المهندسين", "area": "المهندسين", "address": "المهندسين، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=المهندسين،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - المحلة", "area": "المحلة", "address": "المحلة، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=المحلة،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - 6 أكتوبر", "area": "6 أكتوبر", "address": "6 أكتوبر، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=6+أكتوبر،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - المعادي", "area": "المعادي", "address": "المعادي، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=المعادي،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - وسط البلد", "area": "وسط البلد", "address": "وسط البلد، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=وسط+البلد،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - حلوان", "area": "حلوان", "address": "حلوان، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=حلوان،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - مصر الجديدة", "area": "مصر الجديدة", "address": "مصر الجديدة، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=مصر+الجديدة،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - الشيخ زايد", "area": "الشيخ زايد", "address": "الشيخ زايد، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=الشيخ+زايد،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - الزمالك", "area": "الزمالك", "address": "الزمالك، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=الزمالك،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - الشروق", "area": "الشروق", "address": "الشروق، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=الشروق،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - أبو رواش", "area": "أبو رواش", "address": "أبو رواش، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=أبو+رواش،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - طنطا", "area": "طنطا", "address": "طنطا، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=طنطا،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - الفيوم", "area": "الفيوم", "address": "الفيوم، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=الفيوم،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - العصافرة", "area": "العصافرة", "address": "العصافرة، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=العصافرة،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - التجمع الخامس", "area": "التجمع الخامس", "address": "التجمع الخامس، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=التجمع+الخامس،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "أوسكار", "branches": [{"name": "فرع 01 - وسط البلد", "area": "وسط البلد", "address": "وسط البلد، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=وسط+البلد،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - الدقي", "area": "الدقي", "address": "الدقي، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=الدقي،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - حلوان", "area": "حلوان", "address": "حلوان، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=حلوان،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - مدينة نصر", "area": "مدينة نصر", "address": "مدينة نصر، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=مدينة+نصر،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - الفيوم", "area": "الفيوم", "address": "الفيوم، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=الفيوم،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - المنيل", "area": "المنيل", "address": "المنيل، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=المنيل،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - مصر الجديدة", "area": "مصر الجديدة", "address": "مصر الجديدة، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=مصر+الجديدة،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - المنيا", "area": "المنيا", "address": "المنيا، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=المنيا،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - المهندسين", "area": "المهندسين", "address": "المهندسين، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=المهندسين،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - حدائق الأهرام", "area": "حدائق الأهرام", "address": "حدائق الأهرام، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=حدائق+الأهرام،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - الزمالك", "area": "الزمالك", "address": "الزمالك، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=الزمالك،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - الشيخ زايد", "area": "الشيخ زايد", "address": "الشيخ زايد، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=الشيخ+زايد،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - قنا", "area": "قنا", "address": "قنا، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=قنا،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "جيان", "branches": [{"name": "فرع 01 - المنصورة", "area": "المنصورة", "address": "المنصورة، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=المنصورة،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - وسط البلد", "area": "وسط البلد", "address": "وسط البلد، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=وسط+البلد،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - المحلة", "area": "المحلة", "address": "المحلة، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=المحلة،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - المنيا", "area": "المنيا", "address": "المنيا، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=المنيا،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - حدائق الأهرام", "area": "حدائق الأهرام", "address": "حدائق الأهرام، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=حدائق+الأهرام،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - العاشر من رمضان", "area": "العاشر من رمضان", "address": "العاشر من رمضان، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=العاشر+من+رمضان،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - العبور", "area": "العبور", "address": "العبور، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=العبور،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - المهندسين", "area": "المهندسين", "address": "المهندسين، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=المهندسين،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - روض الفرج", "area": "روض الفرج", "address": "روض الفرج، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=روض+الفرج،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - مصر الجديدة", "area": "مصر الجديدة", "address": "مصر الجديدة، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=مصر+الجديدة،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - دمياط", "area": "دمياط", "address": "دمياط، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=دمياط،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - العصافرة", "area": "العصافرة", "address": "العصافرة، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=العصافرة،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "زهران ماركت", "branches": [{"name": "فرع 01 - 6 أكتوبر", "area": "6 أكتوبر", "address": "6 أكتوبر، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=6+أكتوبر،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - الدقي", "area": "الدقي", "address": "الدقي، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=الدقي،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - حدائق الأهرام", "area": "حدائق الأهرام", "address": "حدائق الأهرام، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=حدائق+الأهرام،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - قنا", "area": "قنا", "address": "قنا، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=قنا،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - روض الفرج", "area": "روض الفرج", "address": "روض الفرج، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=روض+الفرج،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - المنيل", "area": "المنيل", "address": "المنيل، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=المنيل،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - المعادي", "area": "المعادي", "address": "المعادي، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=المعادي،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - مدينة نصر", "area": "مدينة نصر", "address": "مدينة نصر، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=مدينة+نصر،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - المحلة", "area": "المحلة", "address": "المحلة، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=المحلة،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - المنيا", "area": "المنيا", "address": "المنيا، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=المنيا،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - دمياط", "area": "دمياط", "address": "دمياط، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=دمياط،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "وكالة المنصورة", "branches": [{"name": "فرع 01 - طنطا", "area": "طنطا", "address": "طنطا، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=طنطا،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - الهرم", "area": "الهرم", "address": "الهرم، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=الهرم،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - أسوان", "area": "أسوان", "address": "أسوان، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=أسوان،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - العبور", "area": "العبور", "address": "العبور، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=العبور،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - المنصورة", "area": "المنصورة", "address": "المنصورة، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=المنصورة،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - المنيا", "area": "المنيا", "address": "المنيا، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=المنيا،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - قنا", "area": "قنا", "address": "قنا، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=قنا،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - حدائق الأهرام", "area": "حدائق الأهرام", "address": "حدائق الأهرام، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=حدائق+الأهرام،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - مدينة نصر", "area": "مدينة نصر", "address": "مدينة نصر، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=مدينة+نصر،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - حلوان", "area": "حلوان", "address": "حلوان، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=حلوان،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - المحلة", "area": "المحلة", "address": "المحلة، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=المحلة،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - الشروق", "area": "الشروق", "address": "الشروق، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=الشروق،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - سوهاج", "area": "سوهاج", "address": "سوهاج، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=سوهاج،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "العلاف ماركت", "branches": [{"name": "فرع 01 - العاشر من رمضان", "area": "العاشر من رمضان", "address": "العاشر من رمضان، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=العاشر+من+رمضان،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - المنيل", "area": "المنيل", "address": "المنيل، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=المنيل،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - المنصورة", "area": "المنصورة", "address": "المنصورة، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=المنصورة،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - أبو رواش", "area": "أبو رواش", "address": "أبو رواش، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=أبو+رواش،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - التجمع الخامس", "area": "التجمع الخامس", "address": "التجمع الخامس، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=التجمع+الخامس،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - المنيا", "area": "المنيا", "address": "المنيا، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=المنيا،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - المهندسين", "area": "المهندسين", "address": "المهندسين، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=المهندسين،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - العبور", "area": "العبور", "address": "العبور، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=العبور،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - الهرم", "area": "الهرم", "address": "الهرم، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=الهرم،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - الشيخ زايد", "area": "الشيخ زايد", "address": "الشيخ زايد، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=الشيخ+زايد،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - روض الفرج", "area": "روض الفرج", "address": "روض الفرج، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=روض+الفرج،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - مصر الجديدة", "area": "مصر الجديدة", "address": "مصر الجديدة، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=مصر+الجديدة،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - حلوان", "area": "حلوان", "address": "حلوان، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=حلوان،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - الدقي", "area": "الدقي", "address": "الدقي، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=الدقي،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - العصافرة", "area": "العصافرة", "address": "العصافرة، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=العصافرة،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "أولاد رجب", "branches": [{"name": "فرع 01 - المعادي", "area": "المعادي", "address": "المعادي، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=المعادي،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - أبو رواش", "area": "أبو رواش", "address": "أبو رواش، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=أبو+رواش،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - مدينة نصر", "area": "مدينة نصر", "address": "مدينة نصر، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=مدينة+نصر،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - أسوان", "area": "أسوان", "address": "أسوان، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=أسوان،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - قنا", "area": "قنا", "address": "قنا، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=قنا،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - دمياط", "area": "دمياط", "address": "دمياط، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=دمياط،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - الهرم", "area": "الهرم", "address": "الهرم، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=الهرم،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - وسط البلد", "area": "وسط البلد", "address": "وسط البلد، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=وسط+البلد،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - العبور", "area": "العبور", "address": "العبور، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=العبور،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - المنيا", "area": "المنيا", "address": "المنيا، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=المنيا،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - المنيل", "area": "المنيل", "address": "المنيل، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=المنيل،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - حدائق الأهرام", "area": "حدائق الأهرام", "address": "حدائق الأهرام، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=حدائق+الأهرام،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - سوهاج", "area": "سوهاج", "address": "سوهاج، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=سوهاج،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - الزمالك", "area": "الزمالك", "address": "الزمالك، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=الزمالك،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "سبينس", "branches": [{"name": "فرع 01 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - 6 أكتوبر", "area": "6 أكتوبر", "address": "6 أكتوبر، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=6+أكتوبر،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - الشيخ زايد", "area": "الشيخ زايد", "address": "الشيخ زايد، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=الشيخ+زايد،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - الدقي", "area": "الدقي", "address": "الدقي، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=الدقي،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - طنطا", "area": "طنطا", "address": "طنطا، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=طنطا،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - العبور", "area": "العبور", "address": "العبور، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=العبور،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - أسوان", "area": "أسوان", "address": "أسوان، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=أسوان،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - العصافرة", "area": "العصافرة", "address": "العصافرة، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=العصافرة،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - أبو رواش", "area": "أبو رواش", "address": "أبو رواش، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=أبو+رواش،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - التجمع الخامس", "area": "التجمع الخامس", "address": "التجمع الخامس، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=التجمع+الخامس،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - حلوان", "area": "حلوان", "address": "حلوان، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=حلوان،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - روض الفرج", "area": "روض الفرج", "address": "روض الفرج، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=روض+الفرج،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - المنصورة", "area": "المنصورة", "address": "المنصورة، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=المنصورة،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - المهندسين", "area": "المهندسين", "address": "المهندسين، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=المهندسين،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - الزمالك", "area": "الزمالك", "address": "الزمالك، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=الزمالك،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "محمود الفار", "branches": [{"name": "فرع 01 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - العاشر من رمضان", "area": "العاشر من رمضان", "address": "العاشر من رمضان، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=العاشر+من+رمضان،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - دمياط", "area": "دمياط", "address": "دمياط، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=دمياط،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - الدقي", "area": "الدقي", "address": "الدقي، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=الدقي،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - الأقصر", "area": "الأقصر", "address": "الأقصر، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=الأقصر،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - المنيل", "area": "المنيل", "address": "المنيل، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=المنيل،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - قنا", "area": "قنا", "address": "قنا، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=قنا،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - بورسعيد", "area": "بورسعيد", "address": "بورسعيد، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=بورسعيد،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - الفيوم", "area": "الفيوم", "address": "الفيوم، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=الفيوم،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - وسط البلد", "area": "وسط البلد", "address": "وسط البلد، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=وسط+البلد،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - المعادي", "area": "المعادي", "address": "المعادي، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=المعادي،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - مدينة نصر", "area": "مدينة نصر", "address": "مدينة نصر، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=مدينة+نصر،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - الزمالك", "area": "الزمالك", "address": "الزمالك، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=الزمالك،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - المطرية", "area": "المطرية", "address": "المطرية، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=المطرية،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - الإسماعيلية", "area": "الإسماعيلية", "address": "الإسماعيلية، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=الإسماعيلية،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - التجمع الخامس", "area": "التجمع الخامس", "address": "التجمع الخامس، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=التجمع+الخامس،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - الهرم", "area": "الهرم", "address": "الهرم، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=الهرم،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++119،+عمارة+T"}]}, {"name": "اللولو هايبر ماركت", "branches": [{"name": "فرع 01 - الأقصر", "area": "الأقصر", "address": "الأقصر، شارع رئيسي  100، عمارة A", "maps": "https://www.google.com/maps/search/?api=1&query=الأقصر،+شارع+رئيسي++100،+عمارة+A"}, {"name": "فرع 02 - المنصورة", "area": "المنصورة", "address": "المنصورة، شارع رئيسي  101، عمارة B", "maps": "https://www.google.com/maps/search/?api=1&query=المنصورة،+شارع+رئيسي++101،+عمارة+B"}, {"name": "فرع 03 - السويس", "area": "السويس", "address": "السويس، شارع رئيسي  102، عمارة C", "maps": "https://www.google.com/maps/search/?api=1&query=السويس،+شارع+رئيسي++102،+عمارة+C"}, {"name": "فرع 04 - الإسكندرية", "area": "الإسكندرية", "address": "الإسكندرية، شارع رئيسي  103، عمارة D", "maps": "https://www.google.com/maps/search/?api=1&query=الإسكندرية،+شارع+رئيسي++103،+عمارة+D"}, {"name": "فرع 05 - كفر الشيخ", "area": "كفر الشيخ", "address": "كفر الشيخ، شارع رئيسي  104، عمارة E", "maps": "https://www.google.com/maps/search/?api=1&query=كفر+الشيخ،+شارع+رئيسي++104،+عمارة+E"}, {"name": "فرع 06 - مصر الجديدة", "area": "مصر الجديدة", "address": "مصر الجديدة، شارع رئيسي  105، عمارة F", "maps": "https://www.google.com/maps/search/?api=1&query=مصر+الجديدة،+شارع+رئيسي++105،+عمارة+F"}, {"name": "فرع 07 - بني سويف", "area": "بني سويف", "address": "بني سويف، شارع رئيسي  106، عمارة G", "maps": "https://www.google.com/maps/search/?api=1&query=بني+سويف،+شارع+رئيسي++106،+عمارة+G"}, {"name": "فرع 08 - أبو رواش", "area": "أبو رواش", "address": "أبو رواش، شارع رئيسي  107، عمارة H", "maps": "https://www.google.com/maps/search/?api=1&query=أبو+رواش،+شارع+رئيسي++107،+عمارة+H"}, {"name": "فرع 09 - مدينة نصر", "area": "مدينة نصر", "address": "مدينة نصر، شارع رئيسي  108، عمارة I", "maps": "https://www.google.com/maps/search/?api=1&query=مدينة+نصر،+شارع+رئيسي++108،+عمارة+I"}, {"name": "فرع 10 - 6 أكتوبر", "area": "6 أكتوبر", "address": "6 أكتوبر، شارع رئيسي  109، عمارة J", "maps": "https://www.google.com/maps/search/?api=1&query=6+أكتوبر،+شارع+رئيسي++109،+عمارة+J"}, {"name": "فرع 11 - الزمالك", "area": "الزمالك", "address": "الزمالك، شارع رئيسي  110، عمارة K", "maps": "https://www.google.com/maps/search/?api=1&query=الزمالك،+شارع+رئيسي++110،+عمارة+K"}, {"name": "فرع 12 - أسيوط", "area": "أسيوط", "address": "أسيوط، شارع رئيسي  111، عمارة L", "maps": "https://www.google.com/maps/search/?api=1&query=أسيوط،+شارع+رئيسي++111،+عمارة+L"}, {"name": "فرع 13 - سموحة", "area": "سموحة", "address": "سموحة، شارع رئيسي  112، عمارة M", "maps": "https://www.google.com/maps/search/?api=1&query=سموحة،+شارع+رئيسي++112،+عمارة+M"}, {"name": "فرع 14 - طنطا", "area": "طنطا", "address": "طنطا، شارع رئيسي  113، عمارة N", "maps": "https://www.google.com/maps/search/?api=1&query=طنطا،+شارع+رئيسي++113،+عمارة+N"}, {"name": "فرع 15 - المهندسين", "area": "المهندسين", "address": "المهندسين، شارع رئيسي  114، عمارة O", "maps": "https://www.google.com/maps/search/?api=1&query=المهندسين،+شارع+رئيسي++114،+عمارة+O"}, {"name": "فرع 16 - التجمع الخامس", "area": "التجمع الخامس", "address": "التجمع الخامس، شارع رئيسي  115، عمارة P", "maps": "https://www.google.com/maps/search/?api=1&query=التجمع+الخامس،+شارع+رئيسي++115،+عمارة+P"}, {"name": "فرع 17 - دمياط", "area": "دمياط", "address": "دمياط، شارع رئيسي  116، عمارة Q", "maps": "https://www.google.com/maps/search/?api=1&query=دمياط،+شارع+رئيسي++116،+عمارة+Q"}, {"name": "فرع 18 - الشروق", "area": "الشروق", "address": "الشروق، شارع رئيسي  117، عمارة R", "maps": "https://www.google.com/maps/search/?api=1&query=الشروق،+شارع+رئيسي++117،+عمارة+R"}, {"name": "فرع 19 - وسط البلد", "area": "وسط البلد", "address": "وسط البلد، شارع رئيسي  118، عمارة S", "maps": "https://www.google.com/maps/search/?api=1&query=وسط+البلد،+شارع+رئيسي++118،+عمارة+S"}, {"name": "فرع 20 - الدقي", "area": "الدقي", "address": "الدقي، شارع رئيسي  119، عمارة T", "maps": "https://www.google.com/maps/search/?api=1&query=الدقي،+شارع+رئيسي++119،+عمارة+T"}]}];
-
-    const accordion = document.getElementById('accordion');
-    const searchInput = document.getElementById('searchInput');
-    const clearBtn = document.getElementById('clearSearch');
-    const stats = document.getElementById('stats');
-
-    function normalize(str) { return (str || '').toString().toLowerCase(); }
-
-    function render(list) {
-      accordion.innerHTML = '';
-      let totalBranches = 0;
-      list.forEach((market, idx) => {
-        totalBranches += (market.branches || []).length;
-
-        const card = document.createElement('section');
-        card.className = 'card';
-
-        const header = document.createElement('button');
-        header.className = 'card-header';
-        header.setAttribute('aria-expanded', 'false');
-        header.setAttribute('aria-controls', 'panel-' + idx);
-        header.innerHTML = `
-          <div class="card-title">
-            <span class="market-name">${market.name}</span>
-            <span class="count">(20 فرع)</span>
-          </div>
-          <span class="chev" aria-hidden="true">▾</span>
-        `;
-
-        const panel = document.createElement('div');
-        panel.className = 'card-panel';
-        panel.id = 'panel-' + idx;
-
-        const ul = document.createElement('ul');
-        ul.className = 'branches';
-
-        (market.branches || []).forEach((b, i) => {
-          const li = document.createElement('li');
-          li.className = 'branch-item';
-          li.innerHTML = `
-            <div class="branch-main">
-              <strong class="branch-name">${b.name}</strong>
-              <span class="branch-area">— ${b.area}</span>
-            </div>
-            <div class="branch-meta">
-              <span class="branch-address">${b.address}</span>
-              <div class="actions">
-                <a href="${b.maps}" target="_blank" rel="noopener">عرض على الخريطة</a>
-                <button class="copy-btn" data-address="${b.address}">نسخ العنوان</button>
-              </div>
-            </div>
-          `;
-          ul.appendChild(li);
-        });
-
-        panel.appendChild(ul);
-        card.appendChild(header);
-        card.appendChild(panel);
-        accordion.appendChild(card);
-
-        header.addEventListener('click', () => {
-          const expanded = header.getAttribute('aria-expanded') === 'true';
-          header.setAttribute('aria-expanded', String(!expanded));
-          panel.style.maxHeight = expanded ? null : panel.scrollHeight + 'px';
-        });
-      });
-
-      stats.textContent = `عدد الهايبر: ${list.length} — إجمالي الفروع المعروضة: ${totalBranches}`;
-
-      accordion.querySelectorAll('.copy-btn').forEach(btn => {
-        btn.addEventListener('click', async (e) => {
-          const txt = e.currentTarget.getAttribute('data-address');
-          try {
-            await navigator.clipboard.writeText(txt);
-            e.currentTarget.textContent = '✓ تم النسخ';
-            setTimeout(() => e.currentTarget.textContent = 'نسخ العنوان', 1200);
-          } catch (err) {
-            alert('لم يتم النسخ، انسخ يدويًا: ' + txt);
-          }
-        });
-      });
-    }
-
-    function filter(term) {
-      const q = normalize(term);
-      if (!q) return DATA;
-      return DATA.map(m => {
-        const matchMarket = normalize(m.name).includes(q);
-        const matchedBranches = (m.branches || []).filter(b =>
-          normalize(b.name).includes(q) ||
-          normalize(b.area).includes(q) ||
-          normalize(b.address).includes(q)
-        );
-        if (matchMarket || matchedBranches.length) {
-          return { name: m.name, branches: matchMarket ? m.branches : matchedBranches };
+    // accordion
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
         }
-        return null;
-      }).filter(Boolean);
+      });
     }
 
-    searchInput.addEventListener('input', () => {
-      render(filter(searchInput.value));
-    });
+    // search
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keyup", function() {
+      const filter = this.value.toLowerCase();
+      const accs = document.getElementsByClassName("accordion");
+      const panels = document.getElementsByClassName("panel");
 
-    clearBtn.addEventListener('click', () => {
-      searchInput.value = '';
-      render(DATA);
-      searchInput.focus();
-    });
+      for (let i = 0; i < accs.length; i++) {
+        const accText = accs[i].textContent.toLowerCase();
+        const btns = panels[i].getElementsByClassName("branch-btn");
 
-    render(DATA);
+        let showAccordion = accText.includes(filter);
+        let foundInBranches = false;
+
+        for (let b = 0; b < btns.length; b++) {
+          const btnText = btns[b].textContent.toLowerCase();
+          if (btnText.includes(filter)) {
+            btns[b].style.display = "inline-block";
+            foundInBranches = true;
+          } else {
+            btns[b].style.display = "none";
+          }
+        }
+
+        if (showAccordion || foundInBranches || filter === "") {
+          accs[i].style.display = "flex";
+          panels[i].style.display = filter && foundInBranches ? "block" : "none";
+        } else {
+          accs[i].style.display = "none";
+          panels[i].style.display = "none";
+        }
+      }
+    });
   </script>
+
 </body>
 </html>
