@@ -12,7 +12,7 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(90deg, #0091ff, #00d4ff, #00ffa3);
+  background: linear-gradient(90deg, #0091ff, #00d4ff);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -150,7 +150,7 @@ header img {
 
 /* ===== BUTTONS ===== */
 .branch-btn {
-  background: linear-gradient(135deg, #00b7ff, #00ffa3);
+  background: linear-gradient(135deg, #02587a);
   border: none;
   color: #fff;
   padding: 12px 18px;
@@ -165,7 +165,7 @@ header img {
 }
 
 .branch-btn:hover {
-  background: linear-gradient(135deg, #00ffa3, #00b7ff);
+  background: linear-gradient(135deg, #00b7ff);
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,183,255,0.4);
 }
