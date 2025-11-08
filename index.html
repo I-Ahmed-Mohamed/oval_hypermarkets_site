@@ -13,8 +13,14 @@
     (Ahmed Mohamed)
   </header>
 
-  <div class="container">
+ 
+    
+  
+  
+  
 
+  <div class="container">
+    
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="🔍 ابحث عن شركة أو فرع...">
     </div>
@@ -222,6 +228,20 @@
     });
 
 
+// دالة لحساب عدد الفروع لكل أكورديون
+function updateBranchCounts() {
+  const accs = document.getElementsByClassName("accordion");
+  const panels = document.getElementsByClassName("panel");
+
+  for (let i = 0; i < accs.length; i++) {
+    const btns = panels[i].getElementsByClassName("branch-btn");
+    // إضافة عدد الفروع بين قوسين بعد اسم الشركة
+    accs[i].textContent = accs[i].textContent.split('(')[0].trim() + " (" + btns.length + ")";
+  }
+}
+
+// نفّذ الدالة عند تحميل الصفحة
+updateBranchCounts();
     
   </script>
 
